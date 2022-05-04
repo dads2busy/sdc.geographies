@@ -13,3 +13,4 @@ dataset_info:
     - type: "data"
       format: "zip"
       url: "https://www2.census.gov/geo/tiger/GENZ2020/shp/cb_2020_51_tract_500k.zip"
+# data files need own idents, others should be for final dataset
