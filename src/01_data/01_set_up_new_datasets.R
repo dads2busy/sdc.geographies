@@ -3,7 +3,7 @@ source(".Rprofile")
 # Fairfax County Planning District Geo
 new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/fairfax_county_planning_district_geo.yml",
                   code_files = "R",
-                  overwrite = FALSE)
+                  overwrite = TRUE)
 
 # Fairfax County Human Services Regions Geo
 new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/fairfax_county_human_services_regions_geo.yml",

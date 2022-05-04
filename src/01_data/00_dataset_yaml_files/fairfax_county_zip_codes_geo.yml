@@ -10,4 +10,9 @@ dataset_info:
   dataset_start_year: "2022"
   dataset_end_year: ""
   dataset_source_files:
-    - "https://services1.arcgis.com/ioennV6PpG5Xodq0/ArcGIS/rest/services/OpenData_S1/FeatureServer/21/query?outFields=*&where=1%3D1&f=geojson"
+    - type: "data"
+      format: "geojson"
+      url: "https://services1.arcgis.com/ioennV6PpG5Xodq0/ArcGIS/rest/services/OpenData_S1/FeatureServer/21/query?outFields=*&where=1%3D1&f=geojson"
+    - type: "doc"
+      format: "json"
+      url: "https://services1.arcgis.com/ioennV6PpG5Xodq0/ArcGIS/rest/services/OpenData_S1/FeatureServer/21?f=pjson"
