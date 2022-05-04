@@ -44,3 +44,4 @@ Thumbs.db
 renv/library/
 renv/python/
 renv/staging/
+.Rproj.user

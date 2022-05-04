@@ -1,0 +1,23 @@
+name: "Data Repo Website"
+output_dir: '../../../../docs/web'
+output:
+  html_document:
+    theme: cerulean
+    highlight: zenburn
+    toc: true
+    toc_depth: 2
+    toc_float:
+      collapsed: false
+navbar:
+  title: "Dataset Repo"
+  left:
+    - text: "Description"
+      href: index.html
+    - text: "Ingest"
+      href: ingest.html
+    - text: "Preparation"
+      href: preparation.html
+    - text: "Analysis"
+      href: analysis.html
+    - text: "Info/Dictionaries"
+      href: datainfo.html

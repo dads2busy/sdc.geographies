@@ -1,0 +1,13 @@
+---
+dataset_info:
+  dataset_type: "geo"             # geo or data
+  data_agency_company_abbrv: "ffxct"
+  data_center_program: "gis"
+  dataset_general_subject: "Zip Codes"
+  dataset_sub_subject: ""
+  dataset_geo_coverage: "va059"
+  dataset_geo_level: ""           # if dataset_type = "data"
+  dataset_start_year: "2022"
+  dataset_end_year: ""
+  dataset_source_files:
+    - "https://services1.arcgis.com/ioennV6PpG5Xodq0/ArcGIS/rest/services/OpenData_S1/FeatureServer/21/query?outFields=*&where=1%3D1&f=geojson"
