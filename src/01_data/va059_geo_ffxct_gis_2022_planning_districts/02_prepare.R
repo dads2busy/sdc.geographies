@@ -1,7 +1,7 @@
 # dataset creation code - dataset preparation (transformation, new variables, linkage, etc)
 
 # Import file from original
-va059_geo_ffxct_gis_2022_planning_districts <- sf::st_read("data/ffxct_gis_planning_districts/original/va059_geo_ffxct_gis_2022_planning_districts.geojson")
+va059_geo_ffxct_gis_2022_planning_districts <- sf::st_read("data/va059_geo_ffxct_gis_2022_planning_districts/original/va059_geo_ffxct_gis_2022_planning_districts.geojson")
 
 # Assign geoid
 va059_geo_ffxct_gis_2022_planning_districts$geoid <- tolower(paste0("51059_pd_", va059_geo_ffxct_gis_2022_planning_districts$DISTRICT_CODE))

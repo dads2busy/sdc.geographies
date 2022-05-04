@@ -19,3 +19,8 @@ new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_file
 new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/fairfax_county_zip_codes_geo.yml",
                   code_files = "R",
                   overwrite = TRUE)
+
+# Virginia Census Tracts Geo
+new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/virginia_census_tracts_geo.yml",
+                  code_files = "R",
+                  overwrite = TRUE)

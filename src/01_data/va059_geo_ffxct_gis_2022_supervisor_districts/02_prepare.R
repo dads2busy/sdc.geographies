@@ -1,7 +1,7 @@
 # dataset creation code - dataset preparation (transformation, new variables, linkage, etc)
 
 # Import file from original
-va059_geo_ffxct_gis_2022_supervisor_districts <- sf::st_read("data/ffxct_gis_planning_districts/original/va059_geo_ffxct_gis_2022_supervisor_districts.geojson")
+va059_geo_ffxct_gis_2022_supervisor_districts <- sf::st_read("data/va059_geo_ffxct_gis_2022_supervisor_districts/original/va059_geo_ffxct_gis_2022_supervisor_districts.geojson")
 
 # Assign geoid
 va059_geo_ffxct_gis_2022_supervisor_districts$geoid <- ""
@@ -16,4 +16,4 @@ va059_geo_ffxct_gis_2022_supervisor_districts$region_name <- ""
 
 # Export final
 final_data_set <- va059_geo_ffxct_gis_2022_supervisor_districts[, c("geoid", "region_name", "region_type", "geometry", ...)]
-sf::st_write(final_data_set, "data/ffxct_gis_planning_districts/distribution/va059_geo_ffxct_gis_2022_supervisor_districts.geojson")
+sf::st_write(final_data_set, "data/va059_geo_ffxct_gis_2022_supervisor_districts/distribution/va059_geo_ffxct_gis_2022_supervisor_districts.geojson")
