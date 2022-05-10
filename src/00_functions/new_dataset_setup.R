@@ -2,8 +2,12 @@ new_dataset_setup <- function(dataset_info_yml_file_path = "src/01_data/00_datas
                               code_files = "R",
                               overwrite = FALSE) {
   dataset_info <- yaml::read_yaml(dataset_info_yml_file_path)$dataset_info
-  # data_source_subject_abbrv <- set_data_source_subject_abbrv(dataset_info)
+
   data_file_basename <- set_data_file_basename(dataset_info)
+
+  data_file_original_path <- file.path("data", data_file_basename, "original", paste0(data_file_basename, ".geojson"))
+  data_file_distribution_path <- file.path("data", data_file_basename, "distribution", paste0(data_file_basename, ".geojson"))
+  if (file.exists(data_file_distribution_path)) unlink(data_file_distribution_path)
 
   dataset_pths <- list(
     ds_orig = list(
@@ -27,14 +31,15 @@ new_dataset_setup <- function(dataset_info_yml_file_path = "src/01_data/00_datas
       dsc = paste0("# dataset creation code - dataset preparation (transformation, new variables, linkage, etc)",
                    "\n\n# Import file from original",
 
-                   "\n", data_file_basename, " <- sf::st_read(\"", file.path("data", data_file_basename, "original", paste0(data_file_basename, ".geojson\"")), ")",
+                   "\n", data_file_basename, " <- sf::st_read(\"", data_file_original_path, "\")",
                    "\n\n# Assign geoid\n", data_file_basename, "$geoid <- \"\"",
                    "\n\n# Assign region_type\n", data_file_basename, "$region_type <- \"\"",
                    "\n\n# Assign region_name\n", data_file_basename, "$region_name <- \"\"",
+                   "\n\n# Assign year\n", data_file_basename, "$year <- \"", dataset_info$dataset_start_year, "\"",
                    "\n\n# measure, measure_type, and value need to be included in non-geo datasets",
                    "\n\n# Export final",
-                   "\nfinal_data_set <- ", data_file_basename, "[, c(\"geoid\", \"region_name\", \"region_type\", \"geometry\", ...)]",
-                   "\nsf::st_write(final_data_set, \"", file.path("data", data_file_basename, "distribution", paste0(data_file_basename, ".geojson\"")), ")"
+                   "\nfinal_data_set <- ", data_file_basename, "[, c(\"geoid\", \"region_name\", \"region_type\", \"year\", \"geometry\", ...)]",
+                   "\nsf::st_write(final_data_set, \"", data_file_distribution_path, "\")"
                    )
     )
   )

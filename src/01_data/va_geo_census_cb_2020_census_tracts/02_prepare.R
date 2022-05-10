@@ -12,8 +12,11 @@ va_geo_census_cb_2020_census_tracts$region_type <- ""
 # Assign region_name
 va_geo_census_cb_2020_census_tracts$region_name <- ""
 
+# Assign year
+va_geo_census_cb_2020_census_tracts$year <- "2020"
+
 # measure, measure_type, and value need to be included in non-geo datasets
 
 # Export final
-final_data_set <- va_geo_census_cb_2020_census_tracts[, c("geoid", "region_name", "region_type", "geometry", ...)]
+final_data_set <- va_geo_census_cb_2020_census_tracts[, c("geoid", "region_name", "region_type", "year", "geometry", ...)]
 sf::st_write(final_data_set, "data/va_geo_census_cb_2020_census_tracts/distribution/va_geo_census_cb_2020_census_tracts.geojson")
