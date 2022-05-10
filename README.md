@@ -17,8 +17,9 @@ The files in a dataset's distribution folder are the authoritative files for dis
 A manifest with a list of the latest distribution files, along with md5 checksums, is available at /data/distribution_file_manifest.csv
 
 Current geography files:<br />
-[dc_geo_census_cb_2020_census_block_groups.geojson](https://github.com/uva-bi-sdad/dc.geographies/blob/5678fd7955a63af47192f56684437a820e3595db/data/dc_geo_census_cb_2020_census_block_groups/distribution/dc_geo_census_cb_2020_census_block_groups.geojson) <br />
-[dc_geo_census_cb_2020_census_tracts.geojson](data/dc_geo_census_cb_2020_census_tracts/distribution/dc_geo_census_cb_2020_census_tracts.geojson)
+[dc_geo_census_cb_2020_census_block_groups.geojson](data/dc_geo_census_cb_2020_census_block_groups/distribution/dc_geo_census_cb_2020_census_block_groups.geojson) <br />
+[dc_geo_census_cb_2020_census_tracts.geojson](data/dc_geo_census_cb_2020_census_tracts/distribution/dc_geo_census_cb_2020_census_tracts.geojson) <br />
+more...
 
 ## New Geography Dataset Creation
 1. Create new yaml settings file and place in /src/01_data/00_dataset_yaml_files. For example:
