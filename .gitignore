@@ -1,8 +1,8 @@
 # ignore R data files
 .Rproj.user/**
 .Rhistory
-*.RData
-*.rds
+#*.RData
+#*.rds
 .Ruserdata
 .Rapp.history
 .Rhistory.RData
@@ -13,15 +13,14 @@
 
 # ignore other types of data files
 #*.xlsx
-*.xls
-*.csv
+#*.xls
+#*.csv
 *.dta
 *.sas7bdat
 *.sav
-*.txt
+#*.txt
 
 # ignore data folder/symbolic link/sensitive file
-data
 secure_data
 ext_data
 tmp
@@ -31,11 +30,11 @@ env.json
 .httr-oauth
 
 # ignore misc files
-~*.docx
-~*.xlsx
+#~*.docx
+#~*.xlsx
 ~*.pptx
 ~*.tmp
-~*.rtf
+#~*.rtf
 Thumbs.db
 .DS_Store
 *.swp
