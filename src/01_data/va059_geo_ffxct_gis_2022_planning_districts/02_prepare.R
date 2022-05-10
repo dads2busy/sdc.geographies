@@ -17,4 +17,4 @@ va059_geo_ffxct_gis_2022_planning_districts$region_name <- stringr::str_to_title
 
 # Export final
 final_data_set <- va059_geo_ffxct_gis_2022_planning_districts[, c("geoid", "region_name", "region_type", "geometry")]
-sf::st_write(final_data_set, "data/ffxct_gis_planning_districts/distribution/va059_geo_ffxct_gis_2022_planning_districts.geojson")
+sf::st_write(final_data_set, "data/va059_geo_ffxct_gis_2022_planning_districts/distribution/va059_geo_ffxct_gis_2022_planning_districts.geojson")
