@@ -5,6 +5,7 @@ dataset_info:
   data_center_program: "gis"
   dataset_general_subject: "Planning Districts"
   dataset_sub_subject: ""
+  dataset_region_type: "Planning District"
   dataset_geo_coverage: "va059"
   dataset_geo_level: ""           # if dataset_type = "data"
   dataset_start_year: "2022"

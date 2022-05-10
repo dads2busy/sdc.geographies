@@ -9,6 +9,11 @@ new_dataset_setup <- function(dataset_info_yml_file_path = "src/01_data/00_datas
   data_file_distribution_path <- file.path("data", data_file_basename, "distribution", paste0(data_file_basename, ".geojson"))
   if (file.exists(data_file_distribution_path)) unlink(data_file_distribution_path)
 
+  final_dataset_select <- paste0(data_file_basename, "[, c(\"geoid\", \"region_name\", \"region_type\", \"year\", \"geometry\")]")
+  if (dataset_info$dataset_type != "geo") {
+    final_dataset_select <- paste0(data_file_basename, "[, c(\"geoid\", \"region_name\", \"region_type\", \"year\", \"geometry\", \"measure\", \"measure_unit\", \"measure_type\", \"value\")]")
+  }
+
   dataset_pths <- list(
     ds_orig = list(
       pth = file.path("data", data_file_basename, "original"),
@@ -33,13 +38,13 @@ new_dataset_setup <- function(dataset_info_yml_file_path = "src/01_data/00_datas
 
                    "\n", data_file_basename, " <- sf::st_read(\"", data_file_original_path, "\")",
                    "\n\n# Assign geoid\n", data_file_basename, "$geoid <- \"\"",
-                   "\n\n# Assign region_type\n", data_file_basename, "$region_type <- \"\"",
+                   "\n\n# Assign region_type\n", data_file_basename, "$region_type <- \"", dataset_info$dataset_region_type, "\"",
                    "\n\n# Assign region_name\n", data_file_basename, "$region_name <- \"\"",
                    "\n\n# Assign year\n", data_file_basename, "$year <- \"", dataset_info$dataset_start_year, "\"",
                    "\n\n# measure, measure_type, and value need to be included in non-geo datasets",
                    "\n\n# Export final",
-                   "\nfinal_data_set <- ", data_file_basename, "[, c(\"geoid\", \"region_name\", \"region_type\", \"year\", \"geometry\", ...)]",
-                   "\nsf::st_write(final_data_set, \"", data_file_distribution_path, "\")"
+                   "\nfinal_dataset <- ", final_dataset_select,
+                   "\nsf::st_write(final_dataset, \"", data_file_distribution_path, "\")"
                    )
     )
   )
@@ -47,16 +52,19 @@ new_dataset_setup <- function(dataset_info_yml_file_path = "src/01_data/00_datas
   if (length(dataset_info$dataset_source_files) > 0) {
     for (i in 1:length(dataset_info$dataset_source_files)) {
       dwnld_fld <- dataset_pths$ds_orig$pth
+      dwnld_file_url <- dataset_info$dataset_source_files[[i]]$url
+      dwnld_file_path <- file.path(dwnld_fld, paste0(data_file_basename, ".", dataset_info$dataset_source_files[[i]]$format))
+
       if (dataset_info$dataset_source_files[[i]]$type == "doc") dwnld_fld <- dataset_pths$ds_docs$pth
 
       assign(paste0("ds_src_ingest_", i),
              list(
                pth = file.path("src/01_data", data_file_basename, paste0("01_ingest_file_", i, ".", code_files)),
                dsc = paste0("# dataset creation code - data source ingest - file ", i,
-                            "\n# source file: ", dataset_info$dataset_source_files[[i]]$url,
+                            "\n# source file: ", dwnld_file_url,
                             "\n\n# Import source file and save to original for backup",
-                            "\nsource_file <- \"", dataset_info$dataset_source_files[[i]]$url, "\"",
-                            "\ndownload.file(source_file, \"", file.path(dwnld_fld, paste0(data_file_basename, ".", dataset_info$dataset_source_files[[i]]$format)), "\")"
+                            "\nsource_file <- \"", dwnld_file_url, "\"",
+                            "\ndownload.file(source_file, \"", dwnld_file_path, "\")"
                             )
              ))
       dataset_pths[paste0("ds_src_ingest_", i)] <- list(get(paste0("ds_src_ingest_", i)))
