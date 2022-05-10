@@ -25,3 +25,6 @@ dc_geo_census_tl_2020_counties$year <- "2020"
 # Export final
 final_dataset <- dc_geo_census_tl_2020_counties[, c("geoid", "region_name", "region_type", "year", "geometry")]
 sf::st_write(final_dataset, "data/dc_geo_census_tl_2020_counties/distribution/dc_geo_census_tl_2020_counties.geojson")
+
+# Update file manifest
+data_file_checksums()

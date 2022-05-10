@@ -20,3 +20,6 @@ va013_geo_arl_2021_civic_associations$year <- "2021"
 # Export final
 final_dataset <- va013_geo_arl_2021_civic_associations[, c("geoid", "region_name", "region_type", "year", "geometry")]
 sf::st_write(final_dataset, "data/va013_geo_arl_2021_civic_associations/distribution/va013_geo_arl_2021_civic_associations.geojson")
+
+# Update file manifest
+data_file_checksums()

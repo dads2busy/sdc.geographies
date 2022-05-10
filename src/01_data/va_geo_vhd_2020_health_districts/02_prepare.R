@@ -27,3 +27,6 @@ va_geo_vhd_2020_health_districts$year <- "2020"
 # Export final
 final_dataset <- va_geo_vhd_2020_health_districts[, c("geoid", "region_name", "region_type", "year", "geometry")]
 sf::st_write(final_dataset, "data/va_geo_vhd_2020_health_districts/distribution/va_geo_vhd_2020_health_districts.geojson")
+
+# Update file manifest
+data_file_checksums()

@@ -33,3 +33,6 @@ dc_geo_census_cb_2020_census_block_groups$year <- "2020"
 # Export final
 final_dataset <- dc_geo_census_cb_2020_census_block_groups[, c("geoid", "region_name", "region_type", "year", "geometry")]
 sf::st_write(final_dataset, "data/dc_geo_census_cb_2020_census_block_groups/distribution/dc_geo_census_cb_2020_census_block_groups.geojson")
+
+# Update file manifest
+data_file_checksums()

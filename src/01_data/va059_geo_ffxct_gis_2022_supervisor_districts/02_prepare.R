@@ -20,3 +20,6 @@ va059_geo_ffxct_gis_2022_supervisor_districts$year <- "2022"
 # Export final
 final_dataset <- va059_geo_ffxct_gis_2022_supervisor_districts[, c("geoid", "region_name", "region_type", "year", "geometry")]
 sf::st_write(final_dataset, "data/va059_geo_ffxct_gis_2022_supervisor_districts/distribution/va059_geo_ffxct_gis_2022_supervisor_districts.geojson")
+
+# Update file manifest
+data_file_checksums()

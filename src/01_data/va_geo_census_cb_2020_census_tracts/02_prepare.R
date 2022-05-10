@@ -31,3 +31,6 @@ va_geo_census_cb_2020_census_tracts$year <- "2020"
 # Export final
 final_dataset <- va_geo_census_cb_2020_census_tracts[, c("geoid", "region_name", "region_type", "year", "geometry")]
 sf::st_write(final_dataset, "data/va_geo_census_cb_2020_census_tracts/distribution/va_geo_census_cb_2020_census_tracts.geojson")
+
+# Update file manifest
+data_file_checksums()

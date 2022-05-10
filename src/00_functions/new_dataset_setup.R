@@ -44,7 +44,9 @@ new_dataset_setup <- function(dataset_info_yml_file_path = "src/01_data/00_datas
                    "\n\n# measure, measure_type, and value need to be included in non-geo datasets",
                    "\n\n# Export final",
                    "\nfinal_dataset <- ", final_dataset_select,
-                   "\nsf::st_write(final_dataset, \"", data_file_distribution_path, "\")"
+                   "\nsf::st_write(final_dataset, \"", data_file_distribution_path, "\")",
+                   "\n\n# Update file manifest",
+                   "\ndata_file_checksums()"
                    )
     )
   )

@@ -20,3 +20,6 @@ va059_geo_ffxct_gis_2022_human_services_regions$year <- "2022"
 # Export final
 final_dataset <- va059_geo_ffxct_gis_2022_human_services_regions[, c("geoid", "region_name", "region_type", "year", "geometry")]
 sf::st_write(final_dataset, "data/va059_geo_ffxct_gis_2022_human_services_regions/distribution/va059_geo_ffxct_gis_2022_human_services_regions.geojson")
+
+# Update file manifest
+data_file_checksums()
