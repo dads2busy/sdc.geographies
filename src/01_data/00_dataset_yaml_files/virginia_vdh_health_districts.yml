@@ -1,0 +1,13 @@
+---
+dataset_info:
+  dataset_type: "geo"             # geo or data
+  data_agency_company_abbrv: "VHD"
+  data_center_program: ""
+  dataset_general_subject: "Health Districts"
+  dataset_sub_subject: ""
+  dataset_region_type: "health district"
+  dataset_geo_coverage: "va"
+  dataset_geo_level: ""           # if dataset_type = "data"
+  dataset_start_year: "2020"
+  dataset_end_year: ""
+  dataset_source_files:

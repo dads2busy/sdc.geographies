@@ -7,7 +7,7 @@ va059_geo_ffxct_gis_2022_planning_districts <- sf::st_read("data/va059_geo_ffxct
 va059_geo_ffxct_gis_2022_planning_districts$geoid <- tolower(paste0("51059_pd_", va059_geo_ffxct_gis_2022_planning_districts$DISTRICT_CODE))
 
 # Assign region_type
-va059_geo_ffxct_gis_2022_planning_districts$region_type <- "Planning District"
+va059_geo_ffxct_gis_2022_planning_districts$region_type <- "planning district"
 
 # Assign region_name
 names(va059_geo_ffxct_gis_2022_planning_districts)[names(va059_geo_ffxct_gis_2022_planning_districts) == "DISTNAME"] <- "region_name"

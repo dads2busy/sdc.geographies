@@ -20,7 +20,57 @@ new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_file
                   code_files = "R",
                   overwrite = TRUE)
 
+# Virginia Counties Geo
+new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/virginia_counties_geo.yml",
+                  code_files = "R",
+                  overwrite = TRUE)
+
 # Virginia Census Tracts Geo
 new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/virginia_census_tracts_geo.yml",
                   code_files = "R",
                   overwrite = TRUE)
+
+# Virginia Census Block Groups Geo
+new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/virginia_census_block_groups_geo.yml",
+                  code_files = "R",
+                  overwrite = TRUE)
+
+# Washington DC Counties Geo
+new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/washington_dc_counties_geo.yml",
+                  code_files = "R",
+                  overwrite = TRUE )
+
+# Washington DC Census Tracts Geo
+new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/washinton_dc_census_tracts_geo.yml",
+                  code_files = "R",
+                  overwrite = TRUE )
+
+# Washington DC Block Groups Geo
+new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/washinton_dc_census_block_groups_geo.yml",
+                  code_files = "R",
+                  overwrite = TRUE )
+
+# Maryland Counties Geo
+new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/maryland_counties_geo.yml",
+                  code_files = "R",
+                  overwrite = TRUE )
+
+# Maryland Census Tracts Geo
+new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/maryland_census_tracts_geo.yml",
+                  code_files = "R",
+                  overwrite = TRUE )
+
+# Maryland Census Block Groups Geo
+new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/maryland_census_block_groups_geo.yml",
+                  code_files = "R",
+                  overwrite = TRUE )
+
+# Virginia Health Districts Geo
+new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/virginia_vdh_health_districts.yml",
+                  code_files = "R",
+                  overwrite = TRUE )
+
+# Arlington Virginia Civic Associations Geo
+new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/arlington_virginia_civic_associations_geo.yml",
+                  code_files = "R",
+                  overwrite = TRUE )

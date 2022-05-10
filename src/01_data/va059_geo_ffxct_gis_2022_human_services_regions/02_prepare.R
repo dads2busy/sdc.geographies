@@ -7,7 +7,7 @@ va059_geo_ffxct_gis_2022_human_services_regions <- sf::st_read("data/va059_geo_f
 va059_geo_ffxct_gis_2022_human_services_regions$geoid <- paste0("51059_hsr_", va059_geo_ffxct_gis_2022_human_services_regions$REGION)
 
 # Assign region_type
-va059_geo_ffxct_gis_2022_human_services_regions$region_type <- "Human Services Region"
+va059_geo_ffxct_gis_2022_human_services_regions$region_type <- "human services region"
 
 # Assign region_name
 va059_geo_ffxct_gis_2022_human_services_regions$region_name <- as.character(va059_geo_ffxct_gis_2022_human_services_regions$REGION)

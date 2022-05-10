@@ -1,0 +1,16 @@
+---
+dataset_info:
+  dataset_type: "geo"             # geo or data
+  data_agency_company_abbrv: "census"
+  data_center_program: "tl"
+  dataset_general_subject: "Counties"
+  dataset_sub_subject: ""
+  dataset_region_type: "county"
+  dataset_geo_coverage: "dc"
+  dataset_geo_level: ""           # if dataset_type = "data"
+  dataset_start_year: "2020"
+  dataset_end_year: ""
+  dataset_source_files:
+    - type: "data"
+      format: "zip"
+      url: "https://www2.census.gov/geo/tiger/TIGER2020/COUNTY/tl_2020_us_county.zip"

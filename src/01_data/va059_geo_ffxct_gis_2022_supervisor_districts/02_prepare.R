@@ -7,7 +7,7 @@ va059_geo_ffxct_gis_2022_supervisor_districts <- sf::st_read("data/va059_geo_ffx
 va059_geo_ffxct_gis_2022_supervisor_districts$geoid <- tolower(paste0("51059_sd_", va059_geo_ffxct_gis_2022_supervisor_districts$DISTRICT))
 
 # Assign region_type
-va059_geo_ffxct_gis_2022_supervisor_districts$region_type <- "Supervisor District"
+va059_geo_ffxct_gis_2022_supervisor_districts$region_type <- "supervisor district"
 
 # Assign region_name
 va059_geo_ffxct_gis_2022_supervisor_districts$region_name <- va059_geo_ffxct_gis_2022_supervisor_districts$DISTRICT

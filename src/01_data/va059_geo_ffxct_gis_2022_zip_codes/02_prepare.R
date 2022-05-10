@@ -7,7 +7,7 @@ va059_geo_ffxct_gis_2022_zip_codes <- sf::st_read("data/va059_geo_ffxct_gis_2022
 va059_geo_ffxct_gis_2022_zip_codes$geoid <- va059_geo_ffxct_gis_2022_zip_codes$ZIPCODE
 
 # Assign region_type
-va059_geo_ffxct_gis_2022_zip_codes$region_type <- "Zip Code"
+va059_geo_ffxct_gis_2022_zip_codes$region_type <- "zip code"
 
 # Assign region_name
 va059_geo_ffxct_gis_2022_zip_codes$region_name <- va059_geo_ffxct_gis_2022_zip_codes$ZIPCITY
