@@ -1,0 +1,17 @@
+---
+dataset_info:
+  dataset_type: "geo"             # geo or data
+  data_agency_company_abbrv: "census"
+  data_center_program: "cb"
+  dataset_general_subject: "Census Tracts"
+  dataset_sub_subject: ""
+  dataset_region_type: "tract"
+  dataset_geo_coverage: "va"
+  dataset_geo_level: ""           # if dataset_type = "data"
+  dataset_start_year: "2020"
+  dataset_end_year: ""
+  dataset_source_files:
+    - type: "data"
+      format: "zip"
+      url: "https://www2.census.gov/geo/tiger/GENZ2020/shp/cb_2020_51_tract_500k.zip"
+# data files need own idents, others should be for final dataset

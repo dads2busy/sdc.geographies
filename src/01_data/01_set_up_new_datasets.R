@@ -1,5 +1,25 @@
 source(".Rprofile")
 
+# US Census County Geo 2010
+new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/us_census_counties_geo_2010.yml",
+                  code_files = "R",
+                  overwrite = TRUE)
+
+# US Census County Geo 2020
+new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/us_census_counties_geo_2020.yml",
+                  code_files = "R",
+                  overwrite = TRUE)
+
+# US Census Tracts Geo 2010
+new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/us_census_tracts_geo_2010.yml",
+                  code_files = "R",
+                  overwrite = TRUE)
+
+# US Census Tracts Geo 2020
+new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/us_census_tracts_geo_2020.yml",
+                  code_files = "R",
+                  overwrite = TRUE)
+
 # Fairfax County Planning District Geo
 new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/fairfax_county_planning_district_geo.yml",
                   code_files = "R",
@@ -20,18 +40,33 @@ new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_file
                   code_files = "R",
                   overwrite = TRUE)
 
-# Virginia Counties Geo
-new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/virginia_counties_geo.yml",
+# Virginia Counties Geo 2020
+new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/virginia_counties_geo_2020.yml",
                   code_files = "R",
                   overwrite = TRUE)
 
-# Virginia Census Tracts Geo
-new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/virginia_census_tracts_geo.yml",
+# Virginia Counties Geo 2010
+new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/virginia_counties_geo_2010.yml",
                   code_files = "R",
                   overwrite = TRUE)
 
-# Virginia Census Block Groups Geo
-new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/virginia_census_block_groups_geo.yml",
+# Virginia Census Tracts Geo 2020
+new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/virginia_census_tracts_geo_2020.yml",
+                  code_files = "R",
+                  overwrite = TRUE)
+
+# Virginia Census Tracts Geo 2010
+new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/virginia_census_tracts_geo_2010.yml",
+                  code_files = "R",
+                  overwrite = TRUE)
+
+# Virginia Census Block Groups Geo 2020
+new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/virginia_census_block_groups_geo_2020.yml",
+                  code_files = "R",
+                  overwrite = TRUE)
+
+# Virginia Census Block Groups Geo 2010
+new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/virginia_census_block_groups_geo_2010.yml",
                   code_files = "R",
                   overwrite = TRUE)
 

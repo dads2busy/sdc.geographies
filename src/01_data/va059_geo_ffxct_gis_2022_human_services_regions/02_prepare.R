@@ -26,5 +26,6 @@ final_dataset_simplified <- rmapshaper::ms_simplify(final_dataset)
 # Export final dataset
 sf::st_write(final_dataset_simplified, "data/va059_geo_ffxct_gis_2022_human_services_regions/distribution/va059_geo_ffxct_gis_2022_human_services_regions.geojson")
 
+sf::st_write(final_dataset, "data/va059_geo_ffxct_gis_2022_human_services_regions/distribution/va059_geo_ffxct_gis_2022_human_services_regions_unsimplified.geojson")
 # Update file manifest
 data_file_checksums()
