@@ -5,6 +5,8 @@ unzip("data/va_geo_vhd_2020_health_districts/original/VDH_Health_Districts.zip",
 va_geo_vhd_2020_health_districts <- sf::st_read("data/va_geo_vhd_2020_health_districts/original/VDH_Health_Districts/geo_export_779d2774-2ad5-42e5-811d-8c3c8ea34e4f.shp")
 va_geo_vhd_2020_health_districts <- sf::st_transform(va_geo_vhd_2020_health_districts, 4326)
 
+unlink("data/va_geo_vhd_2020_health_districts/original/VDH_Health_Districts", recursive = T)
+
 # Assign geoid
 va_geo_vhd_2020_health_districts$geoid <-
   tolower(

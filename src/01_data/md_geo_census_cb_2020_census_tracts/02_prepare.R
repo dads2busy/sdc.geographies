@@ -5,6 +5,8 @@ unzip("data/md_geo_census_cb_2020_census_tracts/original/md_geo_census_cb_2020_c
 md_geo_census_cb_2020_census_tracts <- sf::st_read("data/md_geo_census_cb_2020_census_tracts/original/cb_2020_24_tract_500k.shp")
 md_geo_census_cb_2020_census_tracts <- sf::st_transform(md_geo_census_cb_2020_census_tracts, 4326)
 
+unlink("data/md_geo_census_cb_2020_census_tracts/original", recursive = T)
+
 # Assign geoid
 md_geo_census_cb_2020_census_tracts$geoid <- md_geo_census_cb_2020_census_tracts$GEOID
 
