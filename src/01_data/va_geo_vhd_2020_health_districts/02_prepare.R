@@ -1,8 +1,6 @@
 # dataset creation code - dataset preparation (transformation, new variables, linkage, etc)
 
 # Import file from original
-va_geo_vhd_2020_health_districts <- sf::st_read("data/va_geo_vhd_2020_health_districts/original/va_geo_vhd_2020_health_districts.geojson")
-
 unzip("data/va_geo_vhd_2020_health_districts/original/VDH_Health_Districts.zip", exdir = "data/va_geo_vhd_2020_health_districts/original/VDH_Health_Districts")
 va_geo_vhd_2020_health_districts <- sf::st_read("data/va_geo_vhd_2020_health_districts/original/VDH_Health_Districts/geo_export_779d2774-2ad5-42e5-811d-8c3c8ea34e4f.shp")
 va_geo_vhd_2020_health_districts <- sf::st_transform(va_geo_vhd_2020_health_districts, 4326)
@@ -24,9 +22,14 @@ va_geo_vhd_2020_health_districts$year <- "2020"
 
 # measure, measure_type, and value need to be included in non-geo datasets
 
-# Export final
+# Select final columns
 final_dataset <- va_geo_vhd_2020_health_districts[, c("geoid", "region_name", "region_type", "year", "geometry")]
-sf::st_write(final_dataset, "data/va_geo_vhd_2020_health_districts/distribution/va_geo_vhd_2020_health_districts.geojson")
+
+# Simplify the geography
+final_dataset_simplified <- rmapshaper::ms_simplify(final_dataset)
+
+# Export final dataset
+sf::st_write(final_dataset_simplified, "data/va_geo_vhd_2020_health_districts/distribution/va_geo_vhd_2020_health_districts.geojson")
 
 # Update file manifest
 data_file_checksums()

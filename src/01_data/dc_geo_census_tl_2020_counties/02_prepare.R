@@ -22,9 +22,14 @@ dc_geo_census_tl_2020_counties$year <- "2020"
 
 # measure, measure_type, and value need to be included in non-geo datasets
 
-# Export final
+# Select final columns
 final_dataset <- dc_geo_census_tl_2020_counties[, c("geoid", "region_name", "region_type", "year", "geometry")]
-sf::st_write(final_dataset, "data/dc_geo_census_tl_2020_counties/distribution/dc_geo_census_tl_2020_counties.geojson")
+
+# Simplify the geography
+final_dataset_simplified <- rmapshaper::ms_simplify(final_dataset)
+
+# Export final dataset
+sf::st_write(final_dataset_simplified, "data/dc_geo_census_tl_2020_counties/distribution/dc_geo_census_tl_2020_counties.geojson")
 
 # Update file manifest
 data_file_checksums()

@@ -17,9 +17,14 @@ va013_geo_arl_2021_civic_associations$year <- "2021"
 
 # measure, measure_type, and value need to be included in non-geo datasets
 
-# Export final
+# Select final columns
 final_dataset <- va013_geo_arl_2021_civic_associations[, c("geoid", "region_name", "region_type", "year", "geometry")]
-sf::st_write(final_dataset, "data/va013_geo_arl_2021_civic_associations/distribution/va013_geo_arl_2021_civic_associations.geojson")
+
+# Simplify the geography
+final_dataset_simplified <- rmapshaper::ms_simplify(final_dataset)
+
+# Export final dataset
+sf::st_write(final_dataset_simplified, "data/va013_geo_arl_2021_civic_associations/distribution/va013_geo_arl_2021_civic_associations.geojson")
 
 # Update file manifest
 data_file_checksums()

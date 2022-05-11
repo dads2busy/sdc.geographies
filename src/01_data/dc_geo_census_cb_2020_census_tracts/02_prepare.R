@@ -28,9 +28,14 @@ dc_geo_census_cb_2020_census_tracts$year <- "2020"
 
 # measure, measure_type, and value need to be included in non-geo datasets
 
-# Export final
+# Select final columns
 final_dataset <- dc_geo_census_cb_2020_census_tracts[, c("geoid", "region_name", "region_type", "year", "geometry")]
-sf::st_write(final_dataset, "data/dc_geo_census_cb_2020_census_tracts/distribution/dc_geo_census_cb_2020_census_tracts.geojson")
+
+# Simplify the geography
+final_dataset_simplified <- rmapshaper::ms_simplify(final_dataset)
+
+# Export final dataset
+sf::st_write(final_dataset_simplified, "data/dc_geo_census_cb_2020_census_tracts/distribution/dc_geo_census_cb_2020_census_tracts.geojson")
 
 # Update file manifest
 data_file_checksums()

@@ -17,9 +17,14 @@ va059_geo_ffxct_gis_2022_zip_codes$year <- "2022"
 
 # measure, measure_type, and value need to be included in non-geo datasets
 
-# Export final
+# Select final columns
 final_dataset <- va059_geo_ffxct_gis_2022_zip_codes[, c("geoid", "region_name", "region_type", "year", "geometry")]
-sf::st_write(final_dataset, "data/va059_geo_ffxct_gis_2022_zip_codes/distribution/va059_geo_ffxct_gis_2022_zip_codes.geojson")
+
+# Simplify the geography
+final_dataset_simplified <- rmapshaper::ms_simplify(final_dataset)
+
+# Export final dataset
+sf::st_write(final_dataset_simplified, "data/va059_geo_ffxct_gis_2022_zip_codes/distribution/va059_geo_ffxct_gis_2022_zip_codes.geojson")
 
 # Update file manifest
 data_file_checksums()
