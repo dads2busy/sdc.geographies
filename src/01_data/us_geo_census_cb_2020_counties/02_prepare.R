@@ -1,11 +1,9 @@
 # dataset creation code - dataset preparation (transformation, new variables, linkage, etc)
 
 # Import file from original
-unzip("data/us_geo_census_cb_2020_counties/original/us_geo_census_cb_2020_counties.zip", exdir = "data/us_geo_census_cb_2020_counties/original/us_geo_census_cb_2020_counties")
-us_geo_census_cb_2020_counties <- sf::st_read("data/us_geo_census_cb_2020_counties/original/us_geo_census_cb_2020_counties/cb_2020_us_county_500k.shp")
+us_geo_census_cb_2020_counties <- sf::st_read("data/us_geo_census_cb_2020_counties/original/us_geo_census_cb_2020_counties.geojson")
 us_geo_census_cb_2020_counties <- sf::st_transform(us_geo_census_cb_2020_counties, 4326)
 
-unlink("data/us_geo_census_cb_2020_counties/original/us_geo_census_cb_2020_counties", recursive = T)
 
 # Assign geoid
 us_geo_census_cb_2020_counties$geoid <- us_geo_census_cb_2020_counties$GEOID
@@ -25,10 +23,10 @@ us_geo_census_cb_2020_counties$year <- "2020"
 final_dataset <- us_geo_census_cb_2020_counties[, c("geoid", "region_name", "region_type", "year", "geometry")]
 
 # Simplify the geography
-final_dataset_simplified <- rmapshaper::ms_simplify(final_dataset)
+#final_dataset_simplified <- rmapshaper::ms_simplify(final_dataset)
 
 # Export final dataset
-sf::st_write(final_dataset_simplified, "data/us_geo_census_cb_2020_counties/distribution/us_geo_census_cb_2020_counties.geojson")
+sf::st_write(final_dataset, "data/us_geo_census_cb_2020_counties/distribution/us_geo_census_cb_2020_counties.geojson")
 
 # Update file manifest
 data_file_checksums()
