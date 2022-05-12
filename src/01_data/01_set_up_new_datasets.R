@@ -100,18 +100,33 @@ new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_file
                   code_files = "R",
                   overwrite = TRUE )
 
-# Maryland Counties Geo
-new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/maryland_counties_geo.yml",
+# Maryland Counties Geo 2020
+new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/maryland_counties_geo_2020.yml",
                   code_files = "R",
                   overwrite = TRUE )
 
-# Maryland Census Tracts Geo
-new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/maryland_census_tracts_geo.yml",
+# Maryland Counties Geo 2010
+new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/maryland_counties_geo_2010.yml",
                   code_files = "R",
                   overwrite = TRUE )
 
-# Maryland Census Block Groups Geo
-new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/maryland_census_block_groups_geo.yml",
+# Maryland Census Tracts Geo 2020
+new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/maryland_census_tracts_geo_2020.yml",
+                  code_files = "R",
+                  overwrite = TRUE )
+
+# Maryland Census Tracts Geo 2010
+new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/maryland_census_tracts_geo_2010.yml",
+                  code_files = "R",
+                  overwrite = TRUE )
+
+# Maryland Census Block Groups Geo 2020
+new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/maryland_census_block_groups_geo_2020.yml",
+                  code_files = "R",
+                  overwrite = TRUE )
+
+# Maryland Census Block Groups Geo 2010
+new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/maryland_census_block_groups_geo_2010.yml",
                   code_files = "R",
                   overwrite = TRUE )
 

@@ -1,0 +1,14 @@
+---
+dataset_info:
+  dataset_type: "geo"             # geo or data
+  data_agency_company_abbrv: "census"
+  data_center_program: "cb"
+  dataset_general_subject: "Census Block Groups"
+  dataset_sub_subject: ""
+  dataset_region_type: "block group"
+  dataset_geo_coverage: "md"
+  dataset_geo_level: ""           # if dataset_type = "data"
+  dataset_start_year: "2010"
+  dataset_end_year: ""
+  dataset_source_files:
+

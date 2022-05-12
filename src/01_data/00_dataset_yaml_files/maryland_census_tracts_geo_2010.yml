@@ -6,7 +6,7 @@ dataset_info:
   dataset_general_subject: "Census Tracts"
   dataset_sub_subject: ""
   dataset_region_type: "tract"
-  dataset_geo_coverage: "va"
+  dataset_geo_coverage: "md"
   dataset_geo_level: ""           # if dataset_type = "data"
   dataset_start_year: "2010"
   dataset_end_year: ""
