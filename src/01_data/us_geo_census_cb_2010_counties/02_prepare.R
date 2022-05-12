@@ -1,19 +1,16 @@
 # dataset creation code - dataset preparation (transformation, new variables, linkage, etc)
 
 # Import file from original
-unzip("data/us_geo_census_cb_2010_counties/original/us_geo_census_cb_2010_counties.zip", exdir = "data/us_geo_census_cb_2010_counties/original/us_geo_census_cb_2010_counties")
-us_geo_census_cb_2010_counties <- sf::st_read("data/us_geo_census_cb_2010_counties/original/us_geo_census_cb_2010_counties/gz_2010_us_050_00_500k.shp")
+us_geo_census_cb_2010_counties <- sf::st_read("data/us_geo_census_cb_2010_counties/original/us_geo_census_cb_2010_counties.geojson")
 us_geo_census_cb_2010_counties <- sf::st_transform(us_geo_census_cb_2010_counties, 4326)
-
-unlink("data/us_geo_census_cb_2010_counties/original/us_geo_census_cb_2010_counties", recursive = T)
 
 states2010 <- sf::st_drop_geometry(tigris::states(cb = T, year = 2010))
 
-us_geo_census_cb_2010_counties <- merge(us_geo_census_cb_2010_counties, states2010, by = "STATE")
+us_geo_census_cb_2010_counties <- merge(us_geo_census_cb_2010_counties, states2010, by.x = "STATEFP", by.y = "STATE", all.x = T)
 
 
 # Assign geoid
-us_geo_census_cb_2010_counties$geoid <- substr(us_geo_census_cb_2010_counties$GEO_ID, 10, 14)
+us_geo_census_cb_2010_counties$geoid <- us_geo_census_cb_2010_counties$GEOID10
 
 # Assign region_type
 us_geo_census_cb_2010_counties$region_type <- "county"
@@ -22,11 +19,9 @@ us_geo_census_cb_2010_counties$region_type <- "county"
 us_geo_census_cb_2010_counties$region_name <-
   stringr::str_to_title(
     paste0(
-      us_geo_census_cb_2010_counties$NAME.x,
-      " ",
-      us_geo_census_cb_2010_counties$LSAD.x,
+      us_geo_census_cb_2010_counties$NAMELSAD10,
       ", ",
-      us_geo_census_cb_2010_counties$NAME.y
+      us_geo_census_cb_2010_counties$NAME
     )
   )
 

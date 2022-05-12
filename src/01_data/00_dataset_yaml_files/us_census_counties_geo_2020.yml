@@ -11,7 +11,4 @@ dataset_info:
   dataset_start_year: "2020"
   dataset_end_year: ""
   dataset_source_files:
-    - type: "data"
-      format: "zip"
-      url: "https://www2.census.gov/geo/tiger/GENZ2020/shp/cb_2020_us_county_500k.zip"
-# data files need own idents, others should be for final dataset
+
