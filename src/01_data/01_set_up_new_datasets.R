@@ -70,18 +70,33 @@ new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_file
                   code_files = "R",
                   overwrite = TRUE)
 
-# Washington DC Counties Geo
-new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/washington_dc_counties_geo.yml",
+# Washington DC Counties Geo 2020
+new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/washington_dc_counties_geo_2020.yml",
                   code_files = "R",
                   overwrite = TRUE )
 
-# Washington DC Census Tracts Geo
-new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/washinton_dc_census_tracts_geo.yml",
+# Washington DC Counties Geo 2010
+new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/washington_dc_counties_geo_2010.yml",
                   code_files = "R",
                   overwrite = TRUE )
 
-# Washington DC Block Groups Geo
-new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/washinton_dc_census_block_groups_geo.yml",
+# Washington DC Census Tracts Geo 2020
+new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/washinton_dc_census_tracts_geo_2020.yml",
+                  code_files = "R",
+                  overwrite = TRUE )
+
+# Washington DC Census Tracts Geo 2010
+new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/washinton_dc_census_tracts_geo_2010.yml",
+                  code_files = "R",
+                  overwrite = TRUE )
+
+# Washington DC Block Groups Geo 2020
+new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/washinton_dc_census_block_groups_geo_2020.yml",
+                  code_files = "R",
+                  overwrite = TRUE )
+
+# Washington DC Block Groups Geo 2010
+new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/washinton_dc_census_block_groups_geo_2010.yml",
                   code_files = "R",
                   overwrite = TRUE )
 

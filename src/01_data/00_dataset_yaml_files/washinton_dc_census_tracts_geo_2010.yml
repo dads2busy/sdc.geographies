@@ -1,0 +1,16 @@
+---
+dataset_info:
+  dataset_type: "geo"             # geo or data
+  data_agency_company_abbrv: "census"
+  data_center_program: "cb"
+  dataset_general_subject: "Census Tracts"
+  dataset_sub_subject: ""
+  dataset_region_type: "tract"
+  dataset_geo_coverage: "dc"
+  dataset_geo_level: ""           # if dataset_type = "data"
+  dataset_start_year: "2010"
+  dataset_end_year: ""
+  dataset_source_files:
+    - type: "data"
+      format: "geojson"
+      url: "data/us_geo_census_cb_2010_census_tracts/distribution/us_geo_census_cb_2010_census_tracts.geojson"
