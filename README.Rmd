@@ -36,16 +36,9 @@ js <- read_json("data/distribution_file_manifest.json")
 dt <- data.table::rbindlist(js)
 ```
 
-```{r pressure, echo = FALSE}
-library(jsonlite)
-js <- read_json("data/distribution_file_manifest.json")
-
-dt <- data.table::rbindlist(js)
-```
-
 ```{r links-db, include = FALSE}
 md_link <- function(text, link) {
-  paste0("[", text, "](", link, ")<br />")
+  paste0("[", text, "](", link, ")<br />", collapse = "")
 }
 ```
 
