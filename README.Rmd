@@ -1,10 +1,14 @@
 ---
-title: "README"
 output: github_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
 ```
 
 # dc.geographies
@@ -32,13 +36,20 @@ js <- read_json("data/distribution_file_manifest.json")
 dt <- data.table::rbindlist(js)
 ```
 
-```{r echo=FALSE}
-file_list <- cat(
-  paste0("[", dt$file, "](", dt$file_path, ")<br />")
-)
+```{r pressure, echo = FALSE}
+library(jsonlite)
+js <- read_json("data/distribution_file_manifest.json")
+
+dt <- data.table::rbindlist(js)
 ```
 
-`r file_list`
+```{r links-db, include = FALSE}
+md_link <- function(text, link) {
+  paste0("[", text, "](", link, ")<br />")
+}
+```
+
+`r md_link(dt$file, dt$file_path)`
 
 ## New Geography Dataset Creation
 
@@ -78,4 +89,3 @@ Running the already created code should download the source file and place it in
 This file has the basic steps and some of the needed code already prepopolated.
 
 Once finished, you will have a final dataset in /data/<name of new dataset>/distribution.
-
