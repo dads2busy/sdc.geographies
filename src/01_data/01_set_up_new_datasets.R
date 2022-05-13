@@ -139,3 +139,8 @@ new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_file
 new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/arlington_virginia_civic_associations_geo.yml",
                   code_files = "R",
                   overwrite = TRUE )
+
+# NCR Counties Geo 2010
+new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/ncr_counties_geo.yml",
+                  code_files = "R",
+                  overwrite = TRUE )
