@@ -144,3 +144,13 @@ new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_file
 new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/ncr_counties_geo.yml",
                   code_files = "R",
                   overwrite = TRUE )
+
+# NCR Census Tracts Geo 2010
+new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/ncr_census_tracts_geo.yml",
+                  code_files = "R",
+                  overwrite = TRUE )
+
+# NCR Census Block Groups Geo 2010
+new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/ncr_census_block_groups_geo.yml",
+                  code_files = "R",
+                  overwrite = TRUE )
