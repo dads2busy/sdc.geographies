@@ -2,7 +2,7 @@
 dataset_info:
   dataset_type: "geo"             # geo or data
   data_agency_company_abbrv: "census"
-  data_center_program: ""
+  data_center_program: "cb"
   dataset_general_subject: "Census Tracts"
   dataset_sub_subject: ""
   dataset_region_type: "tracts"
@@ -13,10 +13,4 @@ dataset_info:
   dataset_source_files:
     - type: "data"
       format: "geojson"
-      url: "data/md_geo_census_cb_2010_census_tracts/distribution/md_geo_census_cb_2010_census_tracts.geojson"
-    - type: "data"
-      format: "geojson"
-      url: "data/dc_geo_census_cb_2010_census_tracts/distribution/dc_geo_census_cb_2010_census_tracts.geojson"
-    - type: "data"
-      format: "geojson"
-      url: "data/va_geo_census_cb_2010_census_tracts/distribution/va_geo_census_cb_2010_census_tracts.geojson"
+      url: "data/us_geo_census_cb_2010_census_tracts/distribution/us_geo_census_cb_2010_census_tracts.geojson"
