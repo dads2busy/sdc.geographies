@@ -8,10 +8,12 @@ va_geo_vhd_2020_health_districts <- sf::st_transform(va_geo_vhd_2020_health_dist
 unlink("data/va_geo_vhd_2020_health_districts/original/VDH_Health_Districts", recursive = T)
 
 # Assign geoid
+
+
 va_geo_vhd_2020_health_districts$geoid <-
   tolower(
     gsub("/", "-",
-         gsub(" ","_", paste0("51_hd_", va_geo_vhd_2020_health_districts$vdh_hd))))
+         gsub(" ","_", paste0("51_hd_", stringr::str_pad(va_geo_vhd_2020_health_districts$fid, 2, "left", "0")))))
 
 # Assign region_type
 va_geo_vhd_2020_health_districts$region_type <- "health district"
