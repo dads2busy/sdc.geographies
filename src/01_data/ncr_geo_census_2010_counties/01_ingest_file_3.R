@@ -2,5 +2,5 @@
 # source file: data/va_geo_census_cb_2010_counties/distribution/va_geo_census_cb_2010_counties.geojson
 
 # Import source file and save to original for backup
-source_file <- "data/va_geo_census_cb_2010_counties/distribution/va_geo_census_cb_2010_counties.geojson"
-file.copy(source_file, "data/ncr_geo_census_2020_counties/original/va_geo_census_2020_counties.geojson")
+source_file <- "data/va_geo_census_cb_2010_census_tracts/distribution/va_geo_census_cb_2010_census_tracts.geojson"
+file.copy(source_file, "data/ncr_geo_census_2010_census_tracts/original/va_geo_census_cb_2010_census_tracts.geojson")
