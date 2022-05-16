@@ -164,3 +164,8 @@ new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_file
 new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/ncr_census_tracts_geo_2020.yml",
                   code_files = "R",
                   overwrite = TRUE )
+
+# NCR Census Block Groups Geo 2020
+new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/ncr_census_block_groups_geo_2020.yml",
+                  code_files = "R",
+                  overwrite = TRUE )
