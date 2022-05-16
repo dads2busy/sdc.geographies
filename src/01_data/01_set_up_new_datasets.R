@@ -141,16 +141,26 @@ new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_file
                   overwrite = TRUE )
 
 # NCR Counties Geo 2010
-new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/ncr_counties_geo.yml",
+new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/ncr_counties_geo_2010.yml",
                   code_files = "R",
                   overwrite = TRUE )
 
 # NCR Census Tracts Geo 2010
-new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/ncr_census_tracts_geo.yml",
+new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/ncr_census_tracts_geo_2010.yml",
                   code_files = "R",
                   overwrite = TRUE )
 
 # NCR Census Block Groups Geo 2010
-new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/ncr_census_block_groups_geo.yml",
+new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/ncr_census_block_groups_geo_2010.yml",
+                  code_files = "R",
+                  overwrite = TRUE )
+
+# NCR Counties Geo 2020
+new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/ncr_census_counties_geo_2020.yml",
+                  code_files = "R",
+                  overwrite = TRUE )
+
+# NCR Census Tracts Geo 2020
+new_dataset_setup(dataset_info_yml_file_path = "src/01_data/00_dataset_yaml_files/ncr_census_tracts_geo_2020.yml",
                   code_files = "R",
                   overwrite = TRUE )
