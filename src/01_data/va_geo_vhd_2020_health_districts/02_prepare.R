@@ -30,7 +30,7 @@ va_geo_vhd_2020_health_districts$year <- "2020"
 final_dataset <- va_geo_vhd_2020_health_districts[, c("geoid", "region_name", "region_type", "year", "geometry")]
 
 # Simplify the geography
-final_dataset_simplified <- rmapshaper::ms_simplify(final_dataset)
+final_dataset_simplified <- rmapshaper::ms_simplify(final_dataset, keep_shapes = TRUE)
 
 # Export final dataset
 sf::st_write(final_dataset_simplified, "data/va_geo_vhd_2020_health_districts/distribution/va_geo_vhd_2020_health_districts.geojson")
