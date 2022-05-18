@@ -2,7 +2,7 @@
 dataset_info:
   dataset_type: "geo"             # geo or data
   data_agency_company_abbrv: "census"
-  data_center_program: "tl"
+  data_center_program: "cb"
   dataset_general_subject: "Counties"
   dataset_sub_subject: ""
   dataset_region_type: "county"
@@ -12,5 +12,5 @@ dataset_info:
   dataset_end_year: ""
   dataset_source_files:
     - type: "data"
-      format: "zip"
-      url: "https://www2.census.gov/geo/tiger/TIGER2020/COUNTY/tl_2020_us_county.zip"
+      format: "geojson"
+      url: "data/us_geo_census_cb_2020_counties/distribution/us_geo_census_cb_2020_counties.geojson"
